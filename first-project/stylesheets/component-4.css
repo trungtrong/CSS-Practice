@@ -1,0 +1,69 @@
+.service-container {
+	margin: 0 auto;
+	padding: 2em;
+
+	overflow: hidden;
+}
+.service-container .service-title {
+	font-size: 2.074em;
+	font-weight: 300;
+	margin: 1.414em 0 .5em;
+	line-height: 1.2;
+}
+
+.service-container .service-content {
+	font-size: 1.125em;
+	line-height: 1.65;
+
+	font-weight: 300;
+	padding-bottom: 10px;
+}
+
+.service-container .item-list {
+	list-style: none;
+	list-style-position: inside;
+	padding: 0;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-gap: 2em;
+}
+
+@media all and (max-width: 992px) {
+	.service-container .item-list {
+		grid-template-columns: 100%;
+		grid-auto-rows: auto;  /*adding rows automatically*/
+	}
+}
+
+.service-container .item-list .service-item {
+	background: #f2f2f2;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: 2em;
+	margin-bottom: 1.5em;
+}
+.service-container .item-list .service-item .icon-service {
+	font-size: 4em;
+	color: pink;
+	text-align: center;
+}
+
+.service-container .item-list .service-item .item-content {
+	font-weight: 300;
+}
+
+.service-container .item-list .service-item .item-content .checked-list {
+	list-style: none;
+	list-style-position: inside;
+	padding-left: 0.5em;
+}
+
+.service-container .item-list .service-item .item-content .checked-list > li > i {
+	color: pink;
+}
+.service-container .item-list .service-item .item-content .checked-list > * {
+	margin-bottom: 1em;
+}
+
+

@@ -1,0 +1,42 @@
+.video-overlay {
+	background: rgba(0,0,0, .6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  
+  text-align: center;
+  width: 100%;
+  height: 100%;
+
+  display: none;
+}
+
+.video-overlay .video-content {
+	margin: 0 auto;
+	
+}
+
+.video-overlay .video-content .video-container {
+	border: none;
+  text-align: center;
+  max-width: 640px; /* Shrink and expand*/
+  margin: 5% auto 15% auto;
+}
+
+.video-overlay .video-content .video-container {
+	text-align: right;
+}
+
+.video-overlay .video-content .video-container .close-button {
+	font-family: Arial, sans-serif;
+	font-size: 24px;
+	cursor: pointer;
+	color: #fff;
+}
+
+@media all and (max-width: 670px) {
+	.video-overlay .video-content .video-container {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
