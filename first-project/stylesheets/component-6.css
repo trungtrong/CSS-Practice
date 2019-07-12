@@ -1,0 +1,111 @@
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+}
+
+@font-face {
+	font-family: 'icomoon';
+	src: url('../fonts/icomoon.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class*="icon-"] {
+	font-family: icomoon!important;
+}
+
+.about-container {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 16px;
+}
+
+.about-container .about-item {
+	flex: 100%;
+}
+
+.about-container .about-info .heading {
+	font-weight: 300;
+	font-size: 1.4em;
+	color: #374752;
+}
+
+.about-container .about-info .about-content {
+	color: rgba(0, 0, 0, .6);
+}
+
+.about-container .about-info .more-info {
+	/* fit-content for remain the position of angle-right icon*/
+	width: fit-content; 
+	cursor: pointer;
+
+	position: relative;
+	margin-bottom: 2em;
+}
+
+.about-container .about-info .more-info a {
+	text-decoration: none;
+	color: #ff7676;
+}
+
+.about-container .about-info .more-info a i::before {
+	content: '\e900';
+	color: transparent;
+}
+
+.about-container .about-info .more-info a i:before {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	color: transparent;
+
+	transition: all 1s;
+}
+
+.about-container .about-info .more-info:hover a i::before {
+	color: #ff7676;
+	left: 110%;
+}
+
+/************************Connect with us***********************/
+.about-container .about-info .contact-info .contact-list {
+	padding-left: 0;
+	margin-top: 0;
+}
+
+.about-container .about-info .contact-info .contact-list li {
+	list-style: none;
+	display: inline-block;
+}
+
+.about-container .about-info .contact-info .contact-list li a {
+	color: #ff7676;
+	text-decoration: none;
+	font-size: 1.5rem; /*relative <html> font-size, not "em" , b/c depending on its parent*/
+	padding-right: 0.7rem;
+}
+
+.about-container .about-info .contact-info .contact-list li a:hover {
+	color: #000;
+}
+/* If theare is no, icon is slanted*/
+
+i {
+	font-style: normal; 
+}
+
+i.icon-twitter::before {
+	content: '\f099';
+}
+
+i.icon-facebook::before {
+	content: '\f09a';
+}
+
+i.icon-instagram::before {
+	content: '\f16d';
+}

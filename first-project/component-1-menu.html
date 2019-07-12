@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" type="text/css" href="stylesheets/component-1.css">
+		<!-- Font Awesome Icon -->
+		<script src="https://kit.fontawesome.com/a04cacf710.js"></script>
+		<title>Responsive Bar</title>
+	</head>
+	
+	<body>
+		<nav class="main-nav">
+			<ul class="main-sections">
+				<li class="active"><a class="home" href="#home">Home</a></li>
+				<li><a class="portfolio" href="#portfolio">Portfolio</a></li>
+				<li><a class="product" href="#product">Product</a></li>
+				<li><a class="about" href="#about">About</a></li>
+				<li><a class="contact" href="#contact">Contact</a></li>
+			</ul>
+			<button class="menu-icon">
+					<span class="icon" href="#">
+						<i class="fas fa-bars "></i>
+					</span>
+			</button>
+		</nav>
+
+		<script>
+			var mainBar = document.querySelector('.main-sections');
+			var menuIcon = document.querySelector('.menu-icon');
+			menuIcon.addEventListener('click',onClick);
+
+			function onClick() {
+				if (mainBar.className === 'main-sections') {
+						mainBar.className += ' responsive';
+				} else {
+						mainBar.className = 'main-sections'
+				}
+			}
+		</script>
+	</body>
+</html>
