@@ -1,0 +1,97 @@
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+.mfp-wrap {  /* = overlay*/
+	width: 100%;
+	height: 100%;
+
+	background: rgba(0, 0, 0, 0.6);
+	opacity: 1;
+
+	position: fixed; /* compared to viewport*/
+	/* need using height: 100%;*/
+	top: 0;
+	left: 0;
+	z-index: 1043;
+
+	outline: none;
+	display: none;
+}
+
+.mfp-iframe-holder {
+	padding: 50px 0;
+}
+
+.mfp-container {
+	text-align: center;  /*center of mfp-wrap*/
+	padding-left: 8px;
+	padding-right: 8px;
+
+}
+
+@media (max-width: 900px) {
+	.mfp-container {
+		padding-left: 6px;
+		padding-right: 6px;
+	} 
+}
+
+/*******content = button + video******/
+.mfp-content {
+
+	width: 100%;  /*consistent width of content =>  don't forget it*/ 
+	max-width: 900px;  /*real width, and responsive */
+	margin: 0 auto; /* placed on center*/
+
+	cursor: auto;
+
+	position: relative;  /* for iframe*/
+	z-index: 1045;
+
+	transition: all .15s ease-out; /*effect*/
+}
+
+
+
+/**********  NOTE  **********/
+
+.mfp-iframe-scaler {
+	width: 100%;
+	height: 0;  
+	padding-top: 56.25%; /*16:9 Aspect Ratio*/
+	/* to make it stretch out*/
+
+	overflow: hidden; /* to avoid the video overflow*/
+}
+
+/**************close button*********/
+.mfp-close {
+	opacity: 0.65; /* = rgba(0, 0, 0,0.65)*/
+
+	font-size: 2em;
+	padding-right: 6px;
+
+	background: transparent;
+	border: 0;
+
+	cursor: pointer;
+	outline: none;
+
+	position: absolute;
+	top: -40px;
+	right: -6px;
+	z-index: 1046;
+}
+
+iframe {
+	display: block;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+
+}

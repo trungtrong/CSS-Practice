@@ -1,0 +1,289 @@
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, Helvatica, sans-serif;
+	font-size: 15px;
+	line-height: 1.5;
+	padding: 0;
+	margin: 0;
+	background-color: #f4f4f4;
+}
+
+.container {
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+/* global ul effect */
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+.button-1 {
+	background-color: #e8491d;
+	height: 30px;
+	padding: 4px 10px;
+	border: 1px solid #35424a;
+	color: #f4f4f4;
+
+	outline: none;
+	cursor: pointer;
+}
+
+/* Header */
+header {
+	background: #35424a;
+	color: #fff;
+	padding-top: 30px;
+	/* for min -height of responsive */
+	min-height: 70px;
+	border-bottom: #e8491d 3px solid;
+}
+
+header a {
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 16px;
+
+	font-weight: bold;
+}
+
+header li {
+	float: left;
+	display: block;
+	padding: 0 20px;
+}
+
+header #branding {
+	float: left;
+}
+
+header #branding h1 {
+	margin: 0;
+}
+
+header nav {
+	float: right;
+	margin-top: 10px;
+}
+
+header .hightlight, header .current a {
+	color: #e8491d;
+	font-weight: bold;
+}
+
+header a:hover {
+	color: #ccc;
+}
+
+/* showcase*/
+#showcase {
+	min-height: 400px;
+	background: url(../images/showcase.png) no-repeat;
+	background-size: cover;
+	/* b/c the main part of this image is on the bottom */
+	background-position: bottom;
+	opacity: 1;
+
+	text-align: center;
+	color: #fff;
+}
+
+#showcase h1 {
+	margin-top: 100px;
+	font-size: 55px;
+	margin-bottom: 10px;
+}
+
+/* overlay  of showcase*/
+#showcase .container {
+	width: 100%;
+	padding: 0 100px;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+#showcase p {
+	font-size: 20px;
+}
+
+/* new letter*/
+#newletter {
+	padding: 15px;
+	color: #fff;
+	background: #35424a;
+	text-align: center;
+}
+
+#newletter h1 {
+	float: left;
+}
+
+#newletter form {
+	float: right;
+	margin-top: 15px;
+}
+
+
+#newletter input[type="email"] {
+	padding: 4px 10px;
+	height: 30px;
+	width: 250px;
+	margin-right: 10px;
+	border: 1px solid #35424a;
+	border-radius: 7px;
+	outline: none;
+}
+
+/* boxes*/
+
+#boxes {
+	margin-top: 20px;
+}
+
+/* each boxes*/
+#boxes .box {
+	float: left;
+	width: 30%;
+	text-align: center;
+	margin: 10px;
+}
+
+#boxes .box img {
+	width: 100px;
+	height: 100px;
+}
+
+#boxes .box > p {
+	text-align: ;
+}
+
+/* footer */
+footer {
+	padding: 20px;
+	margin-top: 20px;
+	color: #fff;
+	background-color: #e8491d;
+	text-align: center;
+} 
+
+/*************** about: main *********************/
+main .container {
+	margin-top: 30px;
+}
+
+/* article */
+main article {
+	float: left;
+	width: 66.67%;
+	padding-right: 30px;
+}
+
+main article h1 {
+	margin-top: 0;
+}
+
+main aside h3 {
+	margin-top: 0;
+}
+
+main aside p {
+	margin: 0;
+}
+
+
+/* sidebar */
+aside#sidebar {
+	float: left;
+	width: 33.33%;
+}
+
+aside#sidebar .dark-sidebar {
+	background-color: #35424a;
+	color: #fff;
+	padding: 15px;
+}
+
+/*************** services: main *********************/
+main #list-item .item {
+	padding: 15px;
+
+	background-color: #eee;
+	border-bottom: 1px solid #ccc;
+} 
+
+
+main #list-item .item p.content {
+	margin: 0;
+	padding-bottom: 10px;
+}
+
+main #list-item .item p.price {
+	margin: 0;
+}
+
+aside#sidebar form input, aside#sidebar form textarea {
+	display: block;
+	width: 100%;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+aside form textarea {
+	resize: none;
+}
+
+/******* Media Queries: Responsive ******/
+/* mobile first*/
+
+@media (max-width: 768px) {
+	header #branding,
+	header nav,
+	header nav li,
+	#newletter h1,
+	#newletter form,
+	#boxes .box,
+	article#main-col,
+	article#list-item,
+	aside#sidebar {
+		float: none;
+		text-align: center;
+		width: 100%;
+		padding: 0;
+	}
+
+	header {
+		padding-bottom: 20px;
+	}
+	
+	header .container, #showcase .container {
+		width: 100%;
+		margin: 0;
+		padding: 0 16px;
+	}
+
+	#showcase .container h1 {
+		margin-top: 40px;
+		font-size: 44px;
+	}
+
+	#newletter button, .quote button {
+		display: block;
+		width: 100%;
+	}
+
+	#newletter form input[type="email"],
+	aside#sidebar form input,
+	aside#sidebar form textarea {
+		width: 100%;
+		margin-bottom: 5px;
+	}
+
+	 {
+		width: 100%
+	}
+}

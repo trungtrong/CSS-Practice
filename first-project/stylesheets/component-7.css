@@ -1,0 +1,104 @@
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+}
+
+@font-face {
+	font-family: 'icomoon';
+	src: url('../fonts/icomoon.woff') format('woff');
+  	font-weight: normal;
+  	font-style: normal;
+}
+
+i[class^="icon-"], i[class*="icon-"] {
+	font-family: icomoon!important;
+	font-style: normal; 
+}
+
+/*****************************/
+.product-container {
+	padding: 0 16px;
+}
+
+.product-container .heading {
+	font-weight: 300;
+	font-size: 1.4em;
+	color: #374752;
+}
+
+.product-container .product-list {
+	padding: 0;
+	margin: 0;
+}
+
+.product-container .product-list .product-item {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 16px 0;
+}
+
+.product-container .product-list .product-item .item-img {
+	width: 70px;
+	max-height: 50px;
+	display: table-cell;
+
+}
+
+.product-container .product-list .product-item .item-img img {
+	width: 100%;
+	border: 1px solid transparent;
+	border-radius: 5px;
+}
+
+.product-container .product-list .product-item .item-content {
+	display: table-cell;
+	vertical-align: top;
+
+	padding-left: 16px;
+}
+
+/********* but when clicking the link on mobile
+=> the background of link is avaible, is blue
+=> solution
+******/
+html {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	outline: 0; /* for Android 4.4*/
+}
+
+.product-container .product-list .product-item .item-content a {
+	display: block;
+	text-decoration: none;
+}
+.product-container .product-list .product-item .item-content a h4 {
+	font-weight: 300;
+	font-size: 1.3rem;
+	color: #374752;
+	margin: 0 0 5px 0;
+}
+
+.product-container .product-list .product-item .item-content p.snippet {
+	margin-top: 0;
+	color: rgba(0, 0, 0, .6);
+}
+
+.product-container .product-list .product-item .item-content .item-rate {
+	font-size: 12px;
+}
+
+.product-container .product-list .product-item .item-content .item-rate i[class="icon-star"]:before {
+	content: '\f005';
+	color: #7bc74d;
+	zoom: 1;
+}
+
+.product-container .product-list .product-item .item-content .item-rate i[class="icon-star-half-alt"]:before {
+	content: '\e901';
+	color: #7bc74d;
+	zoom: 1;
+}	
+

@@ -6,6 +6,18 @@ body {
 	font-family: Arial, sans-serif;
 }
 
+@font-face {
+	font-family: 'icomoon';
+	src: url('../fonts/icomoon.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i[class^="icon-"], i[class*="icon-"] {
+	font-family: icomoon!important;
+}
+
+/******************Container*******************/
 .benefit-container {
 	display: flex;
 	flex-wrap: wrap;
@@ -21,20 +33,34 @@ body {
 	border-radius: 10px;
 }
 
+/**************** Heading *************/
+
 .benefit-item .benefit-heading {
 	color: #ff7676;
 	font-weight: 300;
 	font-size: 1.3em;
 }
+.benefit-item .benefit-heading i:before {
+	content: "\f004";
+}
 
 .benefit-item .benefit-heading i {
 	font-size: 1.5em;
+	display: table-cell;
+	padding-right: 10px;
 }
+
+.benefit-item .benefit-heading span {
+	display: table-cell;
+}
+/*************************************/
 
 .benefit-item .benefit-content {
 	margin: 0;
 	color: rgba(0, 0, 0, .6);
 }
+
+/*********************************/
 
 .benefit-item .more-info {
 	/* fit-content for remain the position of angle-right icon*/
@@ -49,19 +75,23 @@ body {
 	color: #ff7676;
 }
 
-.benefit-item .more-info a i {
+.benefit-item .more-info a i:before {
+	content: '\e900';
+	color: transparent;
+
 	position: absolute;
 	left: 50%;
 	top: 0;
-	color: transparent;
 
 	transition: all 1s;
 }
 
-.benefit-item .more-info:hover a i {
+.benefit-item .more-info:hover a i:before {
 	color: #ff7676;
 	left: 110%;
 }
+
+/*****************************/
 
 @media (min-width: 768px) {
 	.benefit-container .benefit-item {
